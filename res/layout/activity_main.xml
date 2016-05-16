@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.example.pulltozoomlistview.view.PullToZoomListView
+        android:id="@+id/listView01"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="#ececec"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="@null" />
+
+</RelativeLayout>

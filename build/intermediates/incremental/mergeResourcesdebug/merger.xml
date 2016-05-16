@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\pulltozoomandrefresh\MainActivity\res"><file name="shape_story_member_usericon_bg_circle" path="C:\pulltozoomandrefresh\MainActivity\res\drawable\shape_story_member_usericon_bg_circle.xml" qualifiers="" type="drawable"/><file name="ic_launcher" path="C:\pulltozoomandrefresh\MainActivity\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi" type="drawable"/><file name="ic_launcher" path="C:\pulltozoomandrefresh\MainActivity\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi" type="drawable"/><file name="ic_launcher" path="C:\pulltozoomandrefresh\MainActivity\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi" type="drawable"/><file name="ic_launcher" path="C:\pulltozoomandrefresh\MainActivity\res\drawable-xxhdpi\ic_launcher.png" qualifiers="xxhdpi" type="drawable"/><file name="activity_main" path="C:\pulltozoomandrefresh\MainActivity\res\layout\activity_main.xml" qualifiers="" type="layout"/><file name="layout_story_userinfo" path="C:\pulltozoomandrefresh\MainActivity\res\layout\layout_story_userinfo.xml" qualifiers="" type="layout"/><file name="news_list_item_view" path="C:\pulltozoomandrefresh\MainActivity\res\layout\news_list_item_view.xml" qualifiers="" type="layout"/><file name="zoomlistview_footer" path="C:\pulltozoomandrefresh\MainActivity\res\layout\zoomlistview_footer.xml" qualifiers="" type="layout"/><file name="main" path="C:\pulltozoomandrefresh\MainActivity\res\menu\main.xml" qualifiers="" type="menu"/><file path="C:\pulltozoomandrefresh\MainActivity\res\values\attrs.xml" qualifiers=""><declare-styleable name="CircleImageView">
+        <attr format="dimension" name="border_width"/>
+        <attr format="color" name="border_color"/>
+    </declare-styleable></file><file path="C:\pulltozoomandrefresh\MainActivity\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen></file><file path="C:\pulltozoomandrefresh\MainActivity\res\values\strings.xml" qualifiers=""><string name="action_settings">Settings</string><string name="app_name">PullToZoomListView</string><string name="hello_world">Hello world!</string></file><file path="C:\pulltozoomandrefresh\MainActivity\res\values\styles.xml" qualifiers=""><style name="loading_small" parent="@android:style/Widget.ProgressBar.Inverse">
+        <item name="android:layout_width">21dip</item>
+        <item name="android:layout_height">21dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style></file><file path="C:\pulltozoomandrefresh\MainActivity\res\values-sw720dp-land\dimens.xml" qualifiers="sw720dp-land"><dimen name="activity_horizontal_margin">128dp</dimen></file><file path="C:\pulltozoomandrefresh\MainActivity\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="C:\pulltozoomandrefresh\MainActivity\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source><source path="C:\pulltozoomandrefresh\MainActivity\build\generated\res\rs\debug"/><source path="C:\pulltozoomandrefresh\MainActivity\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug"><source path="C:\pulltozoomandrefresh\MainActivity\build-types\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="CircleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable></configuration></mergedItems></merger>
