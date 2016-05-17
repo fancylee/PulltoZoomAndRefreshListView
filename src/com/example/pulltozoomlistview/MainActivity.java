@@ -3,8 +3,13 @@ package com.example.pulltozoomlistview;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AbsListView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.pulltozoomlistview.adapter.MessageListAdapter;
 import com.example.pulltozoomlistview.util.DensityUtil;
@@ -26,7 +31,10 @@ public class MainActivity extends Activity implements PullToZoomListViewListener
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
+		getWindow().addFlags(
+				WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 		initListView();
 	}
 
@@ -50,6 +58,26 @@ public class MainActivity extends Activity implements PullToZoomListViewListener
 		 mListView.setHeaderView();
 		 mListView.setAdapter(mAdapter);
 		 mListView.setPullToZoomListViewListener(this);
+		 mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+			 @Override
+			 public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+			 }
+
+			 @Override
+			 public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+				 Log.d("MainActivity", "第一个可见的item" + firstVisibleItem);
+				 int mHeaderHight = mListView.getHeaderView().getHeight();
+				 Log.d("MainActivity","得到头部的高度"+mHeaderHight);
+				 int mNormalHight = mListView.getChildAt(1).getHeight();
+				 Log.d("MainActivity","得到普通子类的高度"+mNormalHight);
+				 int mTop = mListView.getChildAt(1).getTop();
+				 Log.d("MainActivity","得到headview头部所在的位置"+mTop);
+				 int mScrollY = -mTop + firstVisibleItem*mNormalHight;
+				 Log.d("MainActivity","得到在滑动的距离是" +mScrollY);
+			 }
+		 });
+
 
 	}
 	
@@ -77,26 +105,28 @@ public class MainActivity extends Activity implements PullToZoomListViewListener
 					mListView.setLoadFinish(false);
 				}
 			}, 3000);
-		} else if (i == 3) {
-			mListView.setLoadFinish(true);
-			new Handler().postDelayed(new Runnable() {
-
-				@Override
-				public void run() {
-					mListView.setLoadFinish(false);
-				}
-			}, 3000);
 		} else {
-			new Handler().postDelayed(new Runnable() {
-
-				@Override
-				public void run() {
-					getData();
-					mAdapter.notifyDataSetChanged();
-					mListView.setLoadFinish(false);
-				}
-			}, 3000);
+//			mListView.setLoadFinish(true);
+//			new Handler().postDelayed(new Runnable() {
+//
+//				@Override
+//				public void run() {
+					mListView.setLoadFinish(true);
+			Toast.makeText(this,"没有跟多数据了",Toast.LENGTH_SHORT).show();
+//				}
+//			}, 3000);
 		}
+//		else {
+//			new Handler().postDelayed(new Runnable() {
+//
+//				@Override
+//				public void run() {
+//					getData();
+//					mAdapter.notifyDataSetChanged();
+//					mListView.setLoadFinish(false);
+//				}
+//			}, 3000);
+//		}
 	}
 
 }
